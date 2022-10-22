@@ -761,7 +761,17 @@ img {
   transition: fill var(--trans);
 }
 
+.form-field input:hover + .icon-form,
 .form-field input:focus + .icon-form {
+  fill: var(--accent-color);
+}
+
+.icon-form:hover,
+.icon-form:focus {
+  fill: var(--accent-color);
+}
+
+.form-field > .icon-form:hover .form-input {
   fill: var(--accent-color);
 }
 
@@ -784,6 +794,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   min-height: 120px;
+  resize: none;
 }
 
 .textarea:hover,
@@ -836,8 +847,9 @@ img {
 
 .icon-check {
   position: absolute;
-  top: 2px;
+  top: 50%;
   left: -15px;
+  transform: translateY(-50%);
 
   display: inline-block;
   width: 16px;
